@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  ul
     slot
 </template>
 <script>

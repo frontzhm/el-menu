@@ -7,3 +7,4 @@ export default {
   name: "ElMenuItem"
 };
 </script>
+<style scoped></style>

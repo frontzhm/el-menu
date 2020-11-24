@@ -2,10 +2,11 @@
   div#app
     el-menu
       el-submenu
-        template(#title) 子菜单标题(有箭头)
+        template(#title) 折叠菜单标题(有箭头)
         el-menu-item 子菜单1
         el-menu-item 子菜单2
       el-menu-item 菜单1
+      el-menu-item 菜单2
 
 </template>
 
