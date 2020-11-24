@@ -1,26 +1,47 @@
 <template lang="pug">
   div#app
-    el-menu
-      el-submenu
-        template(#title) 折叠菜单标题(有箭头)
-        el-menu-item 子菜单1
-        el-menu-item 子菜单2
-      el-menu-item 菜单1
-      el-menu-item 菜单2
+    my-menu(:data="data")
 
 </template>
 
 <script>
-import ElMenu from "./components/ElMenu.vue";
-import ElMenuItem from "./components/ElMenuItem.vue";
-import ElSubmenu from "./components/ElSubmenu";
+import MyMenu from "./components/MyMenu";
 
 export default {
   name: "App",
   components: {
-    ElMenu,
-    ElMenuItem,
-    ElSubmenu
+    MyMenu
+  },
+  data() {
+    return {
+      data: [
+        { title: "菜单1", id: 1 },
+        {
+          title: "菜单2",
+          id: 2,
+          children: [
+            { title: "菜单21", id: 21 },
+            { title: "菜单22", id: 22 }
+          ]
+        },
+        { title: "菜单3", id: 3 },
+        {
+          title: "菜单4",
+          id: 4,
+          children: [
+            { title: "菜单41", id: 41 },
+            {
+              title: "菜单42",
+              id: 42,
+              children: [
+                { title: "菜单421", id: 421 },
+                { title: "菜单422", id: 422 }
+              ]
+            }
+          ]
+        }
+      ]
+    };
   }
 };
 </script>
