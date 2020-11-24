@@ -1,17 +1,25 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+<template lang="pug">
+  div#app
+    el-menu
+      el-submenu
+        template(#title) 子菜单标题(有箭头)
+        el-menu-item 子菜单1
+        el-menu-item 子菜单2
+      el-menu-item 菜单1
+
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import ElMenu from "./components/ElMenu.vue";
+import ElMenuItem from "./components/ElMenuItem.vue";
+import ElSubmenu from "./components/ElSubmenu";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    ElMenu,
+    ElMenuItem,
+    ElSubmenu
   }
 };
 </script>
@@ -19,10 +27,5 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
