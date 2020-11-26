@@ -5,8 +5,9 @@
 </template>
 
 <script>
-import MyMenu from "./components/MyMenu";
-// import MyMenu from "./components/MyMenu";
+// 以下一个是递归的写法 一个是jsx +render的写法
+import MyMenu from "./components/MyMenu.js";
+// import MyMenu from "./components/MyMenu.vue";
 
 export default {
   name: "App",
