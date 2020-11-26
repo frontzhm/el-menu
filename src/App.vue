@@ -6,6 +6,7 @@
 
 <script>
 import MyMenu from "./components/MyMenu";
+// import MyMenu from "./components/MyMenu";
 
 export default {
   name: "App",
